@@ -1,0 +1,97 @@
+{
+  "http_req_failed{stage_profile:steady}": ["rate<0.01"],
+  "http_reqs{stage_profile:steady}": ["rate>0"],
+
+  "http_req_duration{type:structure,structure:agencyscheme}": ["avg<1000"],
+  "http_req_duration{type:structure,structure:categoryscheme}": ["avg<1000"],
+  "http_req_duration{type:structure,structure:categorisation}": ["avg<1000"],
+  "http_req_duration{type:structure,structure:codelist}": ["avg<1000"],
+  "http_req_duration{type:structure,structure:conceptscheme}": ["avg<1000"],
+  "http_req_duration{type:structure,structure:contentconstraint}": ["avg<1000"],
+  "http_req_duration{type:structure,structure:dataflow}": ["avg<60000"],
+  "http_req_duration{type:structure,structure:datastructure}": ["avg<60000"],
+  "http_req_duration{type:structure,structure:hierarchicalcodelist}": [
+    "avg<1000"
+  ],
+  "http_req_duration{type:structure,structure:metadataflow}": ["avg<1000"],
+  "http_req_duration{type:structure,structure:metadatastructure}": ["avg<1000"],
+  "http_req_duration{type:structure,structure:structureset}": ["avg<1000"],
+
+  "http_req_duration{type:data,format:xml,dataSize:xSmall}": ["avg<35000"],
+  "http_req_duration{type:data,format:xml,dataSize:small}": ["avg<45000"],
+  "http_req_duration{type:data,format:xml,dataSize:medium}": ["avg<50000"],
+  "http_req_duration{type:data,format:xml,dataSize:large}": ["avg<50000"],
+  "http_req_duration{type:data,format:xml,dataSize:xLarge}": ["avg<65000"],
+
+  "http_req_duration{type:data,format:json,dataSize:xSmall}": ["avg<35000"],
+  "http_req_duration{type:data,format:json,dataSize:small}": ["avg<45000"],
+  "http_req_duration{type:data,format:json,dataSize:medium}": ["avg<50000"],
+  "http_req_duration{type:data,format:json,dataSize:large}": ["avg<50000"],
+  "http_req_duration{type:data,format:json,dataSize:xLarge}": ["avg<65000"],
+
+  "http_req_duration{type:data,format:csv,dataSize:xSmall}": ["avg<35000"],
+  "http_req_duration{type:data,format:csv,dataSize:small}": ["avg<45000"],
+  "http_req_duration{type:data,format:csv,dataSize:medium}": ["avg<50000"],
+  "http_req_duration{type:data,format:csv,dataSize:large}": ["avg<50000"],
+  "http_req_duration{type:data,format:csv,dataSize:xLarge}": ["avg<65000"],
+
+  "http_req_duration{type:data,format:xml,dataSize:xSmall,range:de}": [
+    "avg<40000"
+  ],
+  "http_req_duration{type:data,format:xml,dataSize:small,range:de}": [
+    "avg<40000"
+  ],
+  "http_req_duration{type:data,format:xml,dataSize:medium,range:de}": [
+    "avg<45000"
+  ],
+  "http_req_duration{type:data,format:xml,dataSize:large,range:de}": [
+    "avg<45000"
+  ],
+  "http_req_duration{type:data,format:xml,dataSize:xLarge,range:de}": [
+    "avg<65000"
+  ],
+
+  "http_req_duration{type:data,format:json,dataSize:xSmall,range:de}": [
+    "avg<45000"
+  ],
+  "http_req_duration{type:data,format:json,dataSize:small,range:de}": [
+    "avg<45000"
+  ],
+  "http_req_duration{type:data,format:json,dataSize:medium,range:de}": [
+    "avg<55000"
+  ],
+  "http_req_duration{type:data,format:json,dataSize:large,range:de}": [
+    "avg<55000"
+  ],
+  "http_req_duration{type:data,format:json,dataSize:xLarge,range:de}": [
+    "avg<65000"
+  ],
+
+  "http_req_duration{type:data,format:csv,dataSize:xSmall,range:de}": [
+    "avg<40000"
+  ],
+  "http_req_duration{type:data,format:csv,dataSize:small,range:de}": [
+    "avg<40000"
+  ],
+  "http_req_duration{type:data,format:csv,dataSize:medium,range:de}": [
+    "avg<40000"
+  ],
+  "http_req_duration{type:data,format:csv,dataSize:large,range:de}": [
+    "avg<40000"
+  ],
+  "http_req_duration{type:data,format:csv,dataSize:xLarge,range:de}": [
+    "avg<50000"
+  ],
+
+  "http_req_duration{dataSize:xSmall}": ["avg<30000"],
+  "http_req_duration{dataSize:small}": ["avg<30000"],
+  "http_req_duration{dataSize:medium}": ["avg<35000"],
+  "http_req_duration{dataSize:large}": ["avg<40000"],
+  "http_req_duration{dataSize:xLarge}": ["avg<65000"],
+
+  "http_req_duration{dataSize:xSmall,range:de}": ["avg<30000"],
+  "http_req_duration{dataSize:small,range:de}": ["avg<30000"],
+  "http_req_duration{dataSize:medium,range:de}": ["avg<35000"],
+  "http_req_duration{dataSize:large,range:de}": ["avg<40000"],
+  "http_req_duration{dataSize:xLarge,range:de}": ["avg<65000"]
+}

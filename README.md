@@ -33,6 +33,32 @@ The test scripts can then be given a path to the JSON test data to use that inst
 
 **Note:** you might need to increase the value for `K6_SETUP_TIMEOUT` to be able to scrape the whole endpoint.
 
+## Usage
+
+[k6](https://grafana.com/docs/k6/latest/set-up/install-k6/) must be installed or run the code in a [k6 container](https://hub.docker.com/r/grafana/k6).
+
+Edit the `weights.json` and `thresholds.json` to match your use-case.
+
+The `weight` van be adjusted according to needs. Every `header` value can also be edited if needed as it will be used literally, this might be especially useful for the range header for data queries. Every key under `dimensionAtObservation`, `type`, `references` and `detail` can also be modified, removed or added as they will also be taken literally.
+It is also possible to use the `weight_oecd.json` (after renaming it to `weights.json`) for a selection of weights matching [this real, public facing, traffic recording](https://gitlab.com/sis-cc/.stat-suite/dotstatsuite-quality-assurance/-/blob/master/PerformanceTests/oecd/public-2025-01-14-14h.json).
+
+`thresholds.json` follows the k6 thresholds notation converted to JSON. Refer the [k6 docs on thresholds](https://grafana.com/docs/k6/latest/using-k6/thresholds/) to fill to make your own.
+
+Set the environment vars listed in [Parameters](#parameters) as needed. Especially `NSIWS_SCHEME`, `NSIWS_HOSTNAME` and `NSIWS_PORT` might need setting. You can also set any other k6 specific env var at this point.
+
+If the data available at the endpoint is large, we advise running `init.js` first as mentioned in [Initialization](#initialization).
+You can do so as follows:
+
+```shell
+NSIWS_SCHEME=https NSIWS_HOSTNAME=my.nsiws.host NSIWS_PORT=443 TEST_INPUT=test_input.json K6_SETUP_TIMEOUT=1h k6 run init.js
+```
+
+You can then run the load or smoke test as follows:
+
+```shell
+NSIWS_SCHEME=https NSIWS_HOSTNAME=my.nsiws.host NSIWS_PORT=443 TESTSET_FILE=test_input.json k6 run load-test.js
+```
+
 ## Parameters
 
 ### Common

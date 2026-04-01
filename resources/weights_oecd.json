@@ -1,0 +1,123 @@
+{
+  "data": {
+    "weight": 11424,
+    "format": {
+      "json": {
+        "weight": 5762,
+        "header": "application/vnd.sdmx.data+json"
+      },
+      "xml": {
+        "weight": 4728,
+        "header": "application/vnd.sdmx.genericdata+xml"
+      },
+      "csv": {
+        "weight": 934,
+        "header": "application/vnd.sdmx.data+csv"
+      }
+    },
+    "filter": {
+      "default": {
+        "weight": 11254,
+        "filter": "?startPeriod=2015&endPeriod=2021"
+      },
+      "noFilter": {
+        "weight": 170,
+        "filter": ""
+      }
+    },
+    "range": {
+      "de": {
+        "weight": 3731,
+        "header": "values=0-5999"
+      },
+      "noRange": {
+        "weight": 7693,
+        "header": ""
+      }
+    },
+    "dimensionAtObservation": {
+      "AllDimensions": {
+        "weight": 11015
+      },
+      "": {
+        "weight": 409
+      }
+    }
+  },
+  "availableconstraint": {
+    "weight": 9782,
+    "format": {
+      "json": {
+        "weight": 4490,
+        "header": "application/vnd.sdmx.structure+json"
+      },
+      "xml": {
+        "weight": 5292,
+        "header": "application/vnd.sdmx.structure+xml"
+      }
+    },
+    "filter": {
+      "default": {
+        "weight": 9700,
+        "filter": "?startPeriod=2015&endPeriod=2021"
+      },
+      "noFilter": {
+        "weight": 82,
+        "filter": ""
+      }
+    },
+    "mode": {
+      "exact": { "weight": 1949 },
+      "available": { "weight": 7833 }
+    },
+    "dimensionAtObservation": {
+      "AllDimensions": {
+        "weight": 7833
+      },
+      "": {
+        "weight": 1949
+      }
+    }
+  },
+  "structure": {
+    "weight": 942,
+    "resource": {
+      "all": { "weight": 35 },
+      "specific": { "weight": 907 }
+    },
+    "type": {
+      "agencyscheme": { "weight": 3 },
+      "dataflow": { "weight": 537 },
+      "datastructure": { "weight": 202 },
+      "conceptscheme": { "weight": 1 },
+      "categoryscheme": { "weight": 12 },
+      "hierarchicalcodelist": { "weight": 179 },
+      "metadatastructure": { "weight": 9 }
+    },
+    "format": {
+      "json": {
+        "weight": 701,
+        "header": "application/vnd.sdmx.structure+json"
+      },
+      "xml": {
+        "weight": 241,
+        "header": "application/vnd.sdmx.structure+xml"
+      }
+    },
+    "detail": {
+      "allcompletestubs": { "weight": 209 },
+      "referencepartial": { "weight": 440 },
+      "full": { "weight": 1 }
+    },
+    "references": {
+      "none": { "weight": 44 },
+      "all": { "weight": 659 },
+      "children": { "weight": 2 },
+      "conceptscheme": { "weight": 9 },
+      "contentconstraint": { "weight": 19 },
+      "dataflow": { "weight": 13 },
+      "parents": { "weight": 195 },
+      "parentsandsiblings": { "weight": 1 }
+    }
+  }
+}

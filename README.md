@@ -1,6 +1,6 @@
-# DotStat test suite
+# .Stat test suite
 
-The DotStat test suite is an extension of the OECD test suite.
+The .Stat test suite is an extension of the OECD test suite.
 
 Running on k6, it provides a way to fire random requests at an SDMX endpoint based on the contents of that endpoint.
 The characteristics of each requests are determined based on weights for each characteristic given in a `weights.json` file.
